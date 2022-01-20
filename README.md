@@ -2,7 +2,7 @@
 Demo repo for db versioning
 
 
-Folder Structure
+Folder Structure :-
 
 Baseline folder contain all the current/latest database objects such as tables, procedure, functions, etc. So this represents the latest state of database.
 
@@ -17,6 +17,7 @@ The filename of alter scripts will have the verison number.
 db.config file contain username and hostname of database and it will be stored on s3.
 
 How to make Changes :-
+
 Any developer making chnages to database will have to checkin following
 
 1. Changes to baseline table, function etc.
