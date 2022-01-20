@@ -1,0 +1,2 @@
+ALTER TABLE `ApplyData`.`App` 
+ADD COLUMN `AppText4` VARCHAR(45) NULL AFTER `AppUID`;
