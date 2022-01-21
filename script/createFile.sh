@@ -1,0 +1,1 @@
+touch changes/"$(date +"%F %T").sql" 
