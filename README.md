@@ -8,9 +8,7 @@ Baseline folder contain all the current/latest database objects such as tables, 
 
 Changes folder contain alter scripts for the changes made to database.
 
-So any change made to database schema, will have two parts
-1. Changes to baseline table, function etc.
-2. An alter script for the corresponding chnage.
+So any change made to database schema, will have to add an alter script for the corresponding change in changes folder.
 
 The filename of alter scripts will have the verison number.
 
@@ -18,15 +16,22 @@ db.config file contain username and hostname of database and it will be stored o
 
 ## How To Make Changes :-
 
-Any developer making chnages to database will have to checkin following
+Any developer making chnages to database will have to checkin an alter script for the corresponding change in changes folder.
 
-1. Changes to baseline table, function etc.
-2. An alter script for the corresponding chnage.
 
 ## How To Deploy :
 
 To deply run this command-
-deploy/script.sh
+script/script.sh
+
+## How To setUp database on localhost :
+
+script/setUp.sh
+
+## How To create file for an alter script :
+
+script/createFile.sh
+
 
 ## How It works :
 
