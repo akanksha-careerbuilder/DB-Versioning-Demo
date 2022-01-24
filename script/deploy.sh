@@ -1,13 +1,20 @@
 echo "Connecting database"
-echo "Enter the target version you want to deploy"
-read TARGET_VERSION
+
+echo "Enter the mysql host"
+read HOST
+
+echo "Enter the mysql username"
+read USER
+
 echo "Enter the mysql password"
 read PASSWORD
+
+echo "Enter the target version you want to deploy"
+read TARGET_VERSION
+
 echo "You want to deploy upto $TARGET_VERSION"
 export PATH=$PATH:/usr/local/mysql/bin
-source db.config
-HOST=$host
-USER=$user
+
 
 CURRENT_DEVIATION=$(mysql -h $HOST -u $USER -p$PASSWORD ApplyData -se "select version from ApplyData.DbHistory order by updated desc LIMIT 1")
 if [ $? -eq "0"  ]

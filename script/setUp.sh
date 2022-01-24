@@ -1,13 +1,21 @@
 echo "Importimng database"
-echo "Enter the database name you want to create"
-read DATABASE_NAME
+echo "Enter the mysql host"
+read HOST
+
+echo "Enter the mysql username"
+read USER
+
 echo "Enter the mysql password"
 read PASSWORD
+
+echo "Enter the database name you want to create"
+read DATABASE_NAME
+
 echo "You want to create database - $DATABASE_NAME"
 export PATH=$PATH:/usr/local/mysql/bin
-source db.config
-HOST=$host
-USER=$user
+#source db.config
+#HOST=$host
+#USER=$user
 
 DATABASE_CREATE=$(mysql -h $HOST -u $USER -p$PASSWORD -se "Create database $DATABASE_NAME")
 if [ $? -eq "0"  ]
