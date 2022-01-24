@@ -18,6 +18,7 @@ db.config file contain username and hostname of database and it will be stored o
 
 Any developer making chnages to database will have to checkin an alter script for the corresponding change in changes folder.
 
+
 ## How To Deploy :
 
 To deply run this command-
